@@ -8,15 +8,32 @@
 <section id="dataDisplaySection" class="dataDisplaySection">
   <span>Total Results: {{totalResult}}</span>
   <div *ngFor="let user of users">
-    <div class="userListSection">
-      <img src={{user.avatar_url}} class="avatarImageIcon">
-      <span class="userInfoSection">
+    <div>
+    <div class="userListSection" class="row">
+      <span class="col-md-2">
+      <img src={{user.avatar_url}} class="avatarImageIcon"></span>
+      <span class="userInfoSection" class="col-md-5">
     <strong class="userNameLabel">{{user.login}}</strong>
     <p>Profile Url :{{user.html_url}}</p>
   </span>
-  <span class="detailButtonSection">
-    <input type="button" id="detailButton" value="Details">
-  </span>
+  <div class="detailButtonSection" class="col-md-2"*ngIf="!user.toggle">
+    <input type="button" id="detailButton" value="Details" (click)="getDetailsForUser(user)">
+  </div>
+  <div class="collapseButtonSection" class="col-md-2"*ngIf="user.toggle">
+    <input type="button" id="collapseButton" value="Collapse" (click)="toggleButton(user)">
+  </div>
+</div>
+  <div *ngIf="details !== null && user.toggle" class="detailSection" >
+    <div *ngFor="let repo of user.details">
+      <div class="row">
+      <span class="col-md-4">
+      {{repo.name}}</span>
+      <span class="col-md-5">
+        {{repo.language}}
+      </span>
+    </div>
+    </div>
+  </div>
   </div>
   </div>
 </section>
