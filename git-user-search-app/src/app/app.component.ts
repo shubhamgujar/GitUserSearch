@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
 public searchUser(){
-  this.userService.getUser(this.userSearchKeyword).subscribe((user) => {
+  this.userService.getUser(this.userSearchKeyword).subscribe((user: any) => {
     this.users = user.items;
     this.totalResult = user.total_count;
   }
