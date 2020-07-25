@@ -11,16 +11,18 @@ export class AppComponent {
 
   userSearchKeyword: string;
   users;
+  totalResult: number = 0;
 
   constructor(private userService: UserServiceService) {
 
   }
 
 public searchUser(){
-  console.log('button clicked');
-  this.userSearchKeyword = document.getElementById('userSearchString').value;
   this.userService.getUser(this.userSearchKeyword).subscribe((user) => {
-    this.users = user.items}
+    console.log(user);
+    this.users = user.items;
+    this.totalResult = user.total_count;
+  }
     );
 }
 }

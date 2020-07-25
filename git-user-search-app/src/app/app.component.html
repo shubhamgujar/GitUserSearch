@@ -1,23 +1,22 @@
 
-<section id="userInputSection">
-  <form>
-    <fieldset>
-          <label>Select list</label>
-          <select id = "myList">
-            <option value = "1">one</option>
-            <option value = "2">two</option>
-            <option value = "3">three</option>
-            <option value = "4">four</option>
-          </select>
-
-  <input type="text" id="userSearchString" name="userSeracchTextBox">
-  <input type="button" id="searchButton" (click)="searchUser()">
-</fieldset>
+<section id="userInputSection" class="userInputSection">
+  <form (submit)="searchUser()">
+  <input type="text" id="userSearchString" name="userSerachTextBox" [(ngModel)]="userSearchKeyword" class="userSerachTextBox">
 </form>
 </section>
 
-<section id="dataDisplaySection">
+<section id="dataDisplaySection" class="dataDisplaySection">
+  <span>Total Results: {{totalResult}}</span>
   <div *ngFor="let user of users">
-    <span>{{user.login}}</span>
+    <div class="userListSection">
+      <img src={{user.avatar_url}} class="avatarImageIcon">
+      <span class="userInfoSection">
+    <strong class="userNameLabel">{{user.login}}</strong>
+    <p>Profile Url :{{user.html_url}}</p>
+  </span>
+  <span class="detailButtonSection">
+    <input type="button" id="detailButton" value="Details">
+  </span>
+  </div>
   </div>
 </section>

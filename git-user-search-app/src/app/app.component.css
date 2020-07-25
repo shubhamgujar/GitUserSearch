@@ -1,0 +1,41 @@
+.userInputSection {
+    background-color: #336699;
+    height: 60px;
+}
+.userSerachTextBox{
+float: left;
+margin-left: 150px;
+margin-top: 20px;
+}
+.searchButton {
+    margin-top: 22px !important;
+    margin-left: 0px;
+    border-width: 0px;
+}
+.dataDisplaySection {
+    background-color: ghostwhite;
+    
+}
+.userListSection{
+    height: 100px;
+    background-color: white;
+    margin: 20px;
+    display: flex;
+}
+.avatarImageIcon{
+    height: 60px;
+    width: 60px;
+    border-radius: 33px;
+}
+
+.userNameLabel{
+    font-size: 18px;
+}
+.userInfoSection{
+    margin-left: 15px;
+    margin-top: 5px;
+}
+.detailButtonSection{
+    margin-left: 160px;
+    margin-top: 50px
+}
