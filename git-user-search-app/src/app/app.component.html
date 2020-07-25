@@ -17,10 +17,10 @@
     <p>Profile Url :{{user.html_url}}</p>
   </span>
   <div class="detailButtonSection" class="col-md-2"*ngIf="!user.toggle">
-    <input type="button" id="detailButton" value="Details" (click)="getDetailsForUser(user)">
+    <input type="button" id="detailButton" value="Details" (click)="getDetailsForUser(user)" class="detailCollapseButton">
   </div>
   <div class="collapseButtonSection" class="col-md-2"*ngIf="user.toggle">
-    <input type="button" id="collapseButton" value="Collapse" (click)="toggleButton(user)">
+    <input type="button" id="collapseButton" value="Collapse" (click)="toggleButton(user)" class="detailCollapseButton">
   </div>
 </div>
   <div *ngIf="details !== null && user.toggle" class="detailSection" >

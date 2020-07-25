@@ -64,3 +64,9 @@ margin-top: 20px;
          -5px 5px #f8f8ff;
          
 }
+.detailCollapseButton {
+    color: darkturquoise;
+    border-color: darkturquoise;
+    border-radius: 6px;
+    width: 90px;
+}
