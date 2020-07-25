@@ -7,10 +7,10 @@
 
 <section id="dataDisplaySection" class="dataDisplaySection">
   <span>Total Results: {{totalResult}}</span>
-  <div *ngFor="let user of users">
+  <div *ngFor="let user of users" style="margin-top: 15px; margin-bottom:  15px;">
     <div>
     <div class="userListSection" class="row">
-      <span class="col-md-2">
+      <span class="col-md-2" style="margin-left: -70px;">
       <img src={{user.avatar_url}} class="avatarImageIcon"></span>
       <span class="userInfoSection" class="col-md-5">
     <strong class="userNameLabel">{{user.login}}</strong>
@@ -24,7 +24,7 @@
   </div>
 </div>
   <div *ngIf="details !== null && user.toggle" class="detailSection" >
-    <div *ngFor="let repo of user.details">
+    <div *ngFor="let repo of user.details" class="repoDetails">
       <div class="row">
       <span class="col-md-4">
       {{repo.name}}</span>

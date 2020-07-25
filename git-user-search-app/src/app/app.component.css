@@ -42,3 +42,6 @@ margin-top: 20px;
 .detailSection{
     margin-left: 120px;
 }
+.repoDetails:nth-child(even) { 
+    background-color: lightgray; 
+}

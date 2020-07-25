@@ -33,7 +33,6 @@ public getDetailsForUser(user){
   this.userService.getuserDetail(user.login).subscribe ((details) => {
     user.details = details;
     user.toggle = true;
-    console.log(details);
   });
 }
 
