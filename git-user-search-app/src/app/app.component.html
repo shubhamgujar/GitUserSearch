@@ -7,12 +7,12 @@
 
 <section id="dataDisplaySection" class="dataDisplaySection">
   <span>Total Results: {{totalResult}}</span>
-  <div *ngFor="let user of users" style="margin-top: 15px; margin-bottom:  15px;">
+  <div *ngFor="let user of pageOfItems" style="margin-top: 15px; margin-bottom:  15px;">
     <div>
     <div class="userListSection" class="row">
-      <span class="col-md-2" style="margin-left:-70px;">
+      <span class="col-md-2">
       <img src={{user.avatar_url}} class="avatarImageIcon"></span>
-      <span class="userInfoSection" class="col-md-5">
+      <span class="userInfoSection" class="col-md-5" style="margin-left: -70px;">
     <strong class="userNameLabel">{{user.login}}</strong>
     <p>Profile Url :{{user.html_url}}</p>
   </span>
@@ -35,5 +35,8 @@
     </div>
   </div>
   </div>
+  </div>
+  <div class="divForPagination">
+    <jw-pagination [items]="users" (changePage)="onChangePage($event)"></jw-pagination>
   </div>
 </section>

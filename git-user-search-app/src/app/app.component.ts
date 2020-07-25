@@ -12,7 +12,7 @@ export class AppComponent {
 
   userSearchKeyword: string;
   users;
-  //users;
+  pageOfItems: Array<any>;
   totalResult: number = 0;
   details;
   count: 0;
@@ -45,5 +45,10 @@ public toggleButton(user)
   else{
     user.toggle = true;
   }
+}
+
+onChangePage(pageOfItems: Array<any>) {
+  // update current page of items
+  this.pageOfItems = pageOfItems;
 }
 }
