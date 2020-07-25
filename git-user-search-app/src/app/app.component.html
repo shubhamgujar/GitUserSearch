@@ -1,13 +1,13 @@
 
 <section id="userInputSection" class="userInputSection">
   <form (submit)="searchUser()">
-  <input type="text" id="userSearchString" name="userSerachTextBox" [(ngModel)]="userSearchKeyword" class="userSerachTextBox">
+  <input type="text" id="userSearchString" placeholder="Search by name" name="userSerachTextBox" [(ngModel)]="userSearchKeyword" class="userSerachTextBox">
 </form>
 </section>
 
 <section id="dataDisplaySection" class="dataDisplaySection">
   <span>Total Results: {{totalResult}}</span>
-  <div *ngFor="let user of pageOfItems" style="margin-top: 15px; margin-bottom:  15px;">
+  <div *ngFor="let user of pageOfItems" class="divOfUserCard">
     <div>
     <div class="userListSection" class="row">
       <span class="col-md-2">

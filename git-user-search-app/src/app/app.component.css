@@ -1,6 +1,8 @@
 .userInputSection {
     background-color: #336699;
     height: 60px;
+    margin-left: 350px;
+    width: 800px;
 }
 .userSerachTextBox{
 float: left;
@@ -13,7 +15,8 @@ margin-top: 20px;
     border-width: 0px;
 }
 .dataDisplaySection {
-    background-color: ghostwhite;
+    margin-left: 350px;
+    width: 800px;
     
 }
 .userListSection{
@@ -37,11 +40,27 @@ margin-top: 20px;
 }
 .detailButtonSection{
     margin-left: 160px;
-    margin-top: 50px
+    margin-top: 50px;
+    top: 55px;
+}
+.collapseButtonSection{
+    top: 55px;
 }
 .detailSection{
     margin-left: 120px;
 }
 .repoDetails:nth-child(even) { 
     background-color: lightgray; 
+}
+.divOfUserCard{
+    background-color: ghostwhite;
+    margin-top: 15px; margin-bottom:  15px;
+    
+    border: 1px solid #f8f8ff;
+    box-shadow:  -1px 1px #f8f8ff,
+         -2px 2px #f8f8ff,
+         -3px 3px #f8f8ff,
+         -4px 4px #f8f8ff,
+         -5px 5px #f8f8ff;
+         
 }
